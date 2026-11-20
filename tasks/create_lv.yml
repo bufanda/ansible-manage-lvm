@@ -9,6 +9,7 @@
     vg: "{{ vg.vgname }}"
     lv: "{{ lv.lvname }}"
     size: "{{ lv.size }}"
+    pvs: "{{ lv.pvs | default(omit) }}"
     shrink: false
     opts: "{{ lv.opts | default('') }}"
     state: present
